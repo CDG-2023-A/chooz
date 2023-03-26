@@ -1,3 +1,3 @@
 # chooz
 
-test
+commit test
