@@ -1,8 +1,5 @@
 package com.cdg.chooz.controller.user.response;
 
-import com.example.manymanyUsers.vote.enums.Age;
-import com.example.manymanyUsers.vote.enums.Gender;
-import com.example.manymanyUsers.vote.enums.MBTI;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
