@@ -3,6 +3,7 @@ package com.cdg.chooz.controller.user;
 import com.cdg.chooz.controller.common.CommonResponse;
 import com.cdg.chooz.controller.user.request.GeneralSignUpRequest;
 import com.cdg.chooz.controller.user.request.GetkakaoTokenRequest;
+import com.cdg.chooz.controller.user.request.GetnaverTokenRequest;
 import com.cdg.chooz.controller.user.response.GetLoginTokenResponse;
 import com.cdg.chooz.domain.token.LoginToken;
 import com.cdg.chooz.domain.user.SignupService;
@@ -50,4 +51,9 @@ public class SignupController {
         return new ResponseEntity(new GetLoginTokenResponse(loginToken), HttpStatus.OK);
     }
 
+    @PostMapping("/signup/naver")
+    public ResponseEntity<GetLoginTokenResponse> signupByNaver(@Valid @RequestBody GetnaverTokenRequest request) {
+        LoginToken loginToken = signupService.signupByThirdParty(request.toDomain());
+        return new ResponseEntity(new GetLoginTokenResponse(loginToken), HttpStatus.OK);
+    }
 }
