@@ -4,5 +4,29 @@ spring:
       client:
         registration:
           kakao:
-            client-id: YOUR_CLIENT_ID
-            client-secret: YOUR_CLIENT_SECRET
+            client-id: be0a6d22a5fcd591b8fc3f6a8f446afe
+            client-secret:
+
+auth.kakao.url: https://kauth.kakao.com
+api.kakao.url: https://kapi.kakao.com
+
+feign:
+  client:
+    config:
+      auth-kakao:
+        connectTimeout: 3100
+        readTimeout: 10100
+        loggerLevel: full
+      api-kakao:
+        connectTimeout: 3100
+        readTimeout: 10100
+        loggerLevel: full
+  compression:
+    response:
+      enabled: false
+      useGzipDecoder: false
+  httpclient:
+    max-connections: 2000
+    max-connections-per-route: 500
+
+logging.level.com.cdg.chooz.client.kakao: DEBUG
