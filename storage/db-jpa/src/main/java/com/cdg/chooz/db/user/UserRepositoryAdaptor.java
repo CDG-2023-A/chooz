@@ -28,4 +28,9 @@ class UserRepositoryAdaptor implements UserRepository {
                 .map(UserEntity::toDomain)
                 .orElse(null);
     }
+
+    @Override
+    public Boolean existsByUserId(Long userId) {
+        return userJpaRepository.existsById(userId);
+    }
 }

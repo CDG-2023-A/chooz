@@ -17,8 +17,10 @@ public class User {
     private Long id;
     private String name;
     private String email;
+    private String nickname;
     private String password;
     private String providerId;
+    private String imageUrl;
     private ProviderType provider;
     private RoleType role;
     private Integer age;
