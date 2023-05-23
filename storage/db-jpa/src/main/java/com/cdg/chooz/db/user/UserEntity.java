@@ -85,10 +85,11 @@ public class UserEntity extends BaseTimeEntity {
 //
     @Builder
     public UserEntity(User user) {
-        this.nickname = nickname;
-        this.email = email;
-        this.imageUrl = imageUrl;
-        this.password = password;
+        this.nickname = user.getName();
+        this.email = user.getEmail();
+        this.password = user.getPassword();
+        this.providerId = user.getProviderId();
+        this.provider = user.getProvider();
     }
 //
 //    public Age classifyAge(Integer age){
