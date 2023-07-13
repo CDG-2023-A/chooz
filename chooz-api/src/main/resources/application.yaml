@@ -2,6 +2,7 @@ spring:
   profiles:
     active: local
     include:
-      - db-jpa
+#      - db-jpa
+      - db-mybatis
       - kakao
       - naver

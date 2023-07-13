@@ -8,7 +8,8 @@ tasks.named('jar') {
 
 dependencies {
     implementation project(':domain')
-    implementation project(':storage:db-jpa')
+//    implementation project(':storage:db-jpa')
+    implementation project(':storage:db-mybatis')
     implementation project(':client:kakao')
     implementation project(':client:naver')
 
